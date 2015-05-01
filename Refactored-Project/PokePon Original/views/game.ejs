@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+    <title>Pokepon!</title>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/lib/jquery.min.js"></script>
+    <script src="/javascripts/lib/raphael.min.js"></script>
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/client.js"></script>
+    <script src="/javascripts/game.js"></script>
+    <script src="/javascripts/sound.js"></script>
+  </head>
+  <body background="/img/pokemon_background.png">
+    <div id="player-containers-container">
+      <div class="player-container" id="you">
+        <h1 class="name">
+          melaniec
+        </h1>
+
+        <div class="pokemon-container">
+          <img class="pokemon" id="mypokepon"></img>
+        </div>
+
+        <div class="health-bar-and-number">
+          <div class="health-bar"></div>
+        </div>
+
+        <!-- TODO: cleanup moves -->
+        <div id="moves" class="moves-or-beats">
+          <div id="textbox">
+            A wild pokemon appeared!
+          </div>
+          <h2><u>moves</u></h2>
+          <div class="move">
+            scratch: <div class="keyboard" id="firstbasic">W</div><div class="keyboard" id="secondbasic">W</div><div class="keyboard" id="thirdbasic">W</div><div class="keyboard" id="fourthbasic">W</div>
+          </div>
+          <br>
+          <br>
+          <div class="move">
+            block: <div class="keyboard" id="firstblock">A</div><div class="keyboard" id="secondblock">A</div><div class="keyboard" id="thirdblock">S</div><div class="keyboard" id="fourthblock">A</div>
+          </div>
+          <br>
+          <br>
+          <div class="move">
+            paralyze: <div class="keyboard" id="firstpara">S</div><div class="keyboard" id="secondpara">A</div><div class="keyboard" id="thirdpara">W</div><div class="keyboard" id="fourthpara">D</div>
+          </div>
+          <br>
+          <br>
+        </div>
+
+      </div><!-- html new lines = spaces so avoid space with comment
+      --><div class="player-container" id="opponent">
+        <h1 class="name">
+        </h1>
+        <div class="pokemon-container">
+          <img class="pokemon" id="enemypokepon"></img>
+        </div>
+
+        <div class="health-bar-and-number">
+          <div class="health-bar"></div>
+        </div>
+
+        <div id="beats" class="moves-or-beats"></div>
+      </div>
+    </div>
+  </body>
+</html>

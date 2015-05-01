@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<title>Soundcloud!</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+var clientId = 'df1eacadddaf233fdf1c1192a27b7ce5';
+// initialize client with app credentials
+SC.initialize({
+  client_id: clientId,
+  redirect_uri: 'http://localhost:3000/soundcloud-auth'
+});
+
+$(function() {
+  /* eventually we need to curl /tracks/293/download, convert it to wav using lame
+   * and use the beat detector to detect beats from the wav file */
+  // get track stream, set to audio tag
+  SC.connect(function() {
+    SC.get("/me/playlists", function(playlists) {
+      console.dir(playlists);
+    });
+  });
+});
+</script>
+</head>
+<body>
+<audio id="audio"></audio>
+</body>
+</html>
