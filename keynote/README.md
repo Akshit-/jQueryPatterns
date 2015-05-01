@@ -1,5 +1,6 @@
 jQuery Specific Patterns: HTML Presentation using Reveal JS
-
+Presentation: http://akshit-.github.io/jQueryPatterns
+ 
 
 Topics Included:
 
